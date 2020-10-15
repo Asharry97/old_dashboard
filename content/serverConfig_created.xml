@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dnsPolicyConfig>
+	<rootDnsProviders>
+		<dnsServer>
+			<status>
+				ENABLE
+			</status>
+			<dnsName>
+				Google DNS Server 1
+			</dnsName>
+			<dnsIP_Address>
+				8.8.8.8
+			</dnsIP_Address>
+			<addrDescription>
+				Google Public DNS Server 1, DO ALL RESOLUTION USING GOOGLE DNS SERVER.
+			</addrDescription>
+		</dnsServer>
+	</rootDnsProviders>
+	<userGroups>
+		<userGroup>
+			<status>
+				ENABLE
+			</status>
+			<userGroupName>
+				UserGroup1-248.190
+			</userGroupName>
+			<userGroupDescription>
+				Desc For UserGroup1
+			</userGroupDescription>
+			<usersIPList>
+				192.168.248.190,192.168.249.190,192.168.0.17
+			</usersIPList>
+		</userGroup>
+		<userGroup>
+			<status>
+				ENABLE
+			</status>
+			<userGroupName>
+				UserGroup1-127.0.0.1
+			</userGroupName>
+			<userGroupDescription>
+				Desc For UserGroup1-127.0.0.1- LOCAL USER
+			</userGroupDescription>
+			<usersIPList>
+				127.0.0.1
+			</usersIPList>
+		</userGroup>
+	</userGroups>
+	<requestedDomain>
+		<request>
+			<status>
+				ENABLE
+			</status>
+			<reqName>
+				ADS USING REGEX IDENTIFIER
+			</reqName>
+			<reqDescription>
+				Block all ADS using Regex, This will capture all Regex based domain , user can provide any regex pattern as per their need
+			</reqDescription>
+			<reqDomainName>
+				doubleclick|googleads|ashish.com
+			</reqDomainName>
+		</request>
+	</requestedDomain>
+	<responseIP>
+		<response>
+			<status>
+				ENABLE
+			</status>
+			<resName>
+				MALICIOUS IP
+			</resName>
+			<resDescription>
+				DETECTING AND IDENTIFYING MALICIOUS WEBSITE BY THEIR IP received after DNS Resolution
+			</resDescription>
+			<resCname>
+				0.0.0.0,chansd,sadsadsad
+			</resCname>
+			<resIP_AddressList>
+				19.19.19.19
+			</resIP_AddressList>
+		</response>
+	</responseIP>
+	<accessPolicies>
+		<policy>
+			<status>
+				ENABLE
+			</status>
+			<policyName>
+				BLOCK ADS & TRACKERS USING WEB CATEGORY FOR ALL USERS
+			</policyName>
+			<policyDescription>
+				BLOCK ALL IDENTIFIED ADS
+			</policyDescription>
+			<dnsServerList>
+			</dnsServerList>
+			<userGroupList>
+			</userGroupList>
+			<requestedDomainList>
+			</requestedDomainList>
+			<webCategoryList>
+				Advertisements & Trackers
+			</webCategoryList>
+			<responseIPList>
+			</responseIPList>
+			<policyAction>
+				BLOCK
+			</policyAction>
+		</policy>
+		<policy>
+			<status>
+				DISABLED
+			</status>
+			<policyName>
+				ALLOW ADS & TRACKERS USING WEB CATEGORY FOR ALL USERS
+			</policyName>
+			<policyDescription>
+				BLOCK ALL IDENTIFIED ADS
+			</policyDescription>
+			<dnsServerList>
+			</dnsServerList>
+			<userGroupList>
+			</userGroupList>
+			<requestedDomainList>
+			</requestedDomainList>
+			<webCategoryList>
+				Advertisements & Trackers
+			</webCategoryList>
+			<responseIPList>
+			</responseIPList>
+			<policyAction>
+				ALLOW
+			</policyAction>
+		</policy>
+		<policy>
+			<status>
+				ENABLE
+			</status>
+			<policyName>
+				BLOCK ADS & TRACKERS USING REGEX FOR ALL USERS
+			</policyName>
+			<policyDescription>
+				BLOCK ALL IDENTIFIED ADS
+			</policyDescription>
+			<dnsServerList>
+			</dnsServerList>
+			<userGroupList>
+			</userGroupList>
+			<requestedDomainList>
+				ADS USING REGEX IDENTIFIER,ADSDSSDS
+			</requestedDomainList>
+			<webCategoryList>
+			</webCategoryList>
+			<responseIPList>
+			</responseIPList>
+			<policyAction>
+				BLOCK
+			</policyAction>
+		</policy>
+		<policy>
+			<status>
+				ENABLE
+			</status>
+			<policyName>
+				BLOCK IT
+			</policyName>
+			<policyDescription>
+				BLOCK ALL IDENTIFIED ADS
+			</policyDescription>
+			<dnsServerList>
+			</dnsServerList>
+			<userGroupList>
+			</userGroupList>
+			<requestedDomainList>
+			</requestedDomainList>
+			<webCategoryList>
+				Advertisements & Trackers,ASHISHTEST
+			</webCategoryList>
+			<responseIPList>
+			</responseIPList>
+			<policyAction>
+				BLOCK
+			</policyAction>
+		</policy>
+	</accessPolicies>
+</dnsPolicyConfig>
